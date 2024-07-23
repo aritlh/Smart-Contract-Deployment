@@ -8,16 +8,12 @@ If you are using metamask, you can get your PRIVATE KEY from:
 - and then account details
 - then export private key
 
-# Sample Hardhat Project
+Once you have your private key, create an `.env` file. Copy and Paste the code inside `.env.example`, then Change `your_private_key` with your private key.
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+Then run the following command:
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
+```sh
+npm install # Install all project dependencies
+npx hardhat compile # Compile smart contract
+npx hardhat run scripts/deploy.js --network swisstronik # Deploy the smart contract
 ```
